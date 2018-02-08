@@ -1,28 +1,18 @@
 {
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "name": "@zeit/next-css",
+  "version": "0.0.7",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "zeit/next-plugins",
+  "dependencies": {
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "find-up": "^2.1.0",
+    "ignore-loader": "^0.1.2",
+    "postcss-loader": "^2.0.10",
+    "style-loader": "^0.19.1"
+  },
   "devDependencies": {
-    "eslint-config-prettier": "^2.9.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^6.1.0",
-    "prettier": "^1.10.2",
-    "xo": "^0.18.2"
-  },
-  "scripts": {
-    "precommit": "lint-staged",
-    "lint": "xo",
-    "test": "npm run lint && NODE_ENV=test nyc ava"
-  },
-  "xo": {
-    "extends": "prettier"
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run lint",
-      "prettier --single-quote --no-semi --write",
-      "git add"
-    ]
+    "webpack": "^3.10.0"
   }
 }
